@@ -1,16 +1,28 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 import Navbar from "../Component/Navbar";
-
+import Hero from "../Component/Hero";
+import Footer from "../Component/Footer";
 
 const RootLayout = () => {
+  const location = useLocation();
+
+  const showHero = location.pathname === "/" || location.pathname === "/home";
+
+  const showFooter = location.pathname === "/" || location.pathname === "/home";
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="p-4">
+
+      {showHero && <Hero />}
+
+      <main className="flex-grow">
         <Outlet />
       </main>
+
+      {showFooter && <Footer />}
     </div>
   );
 };
