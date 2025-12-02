@@ -8,9 +8,9 @@ import Footer from "../Component/Footer";
 const RootLayout = () => {
   const location = useLocation();
 
-  const showHero = location.pathname === "/" || location.pathname === "/home";
+  const showHero = location.pathname === "/" || location.pathname === "/hero";
 
-  const showFooter = location.pathname === "/" || location.pathname === "/home";
+  const showFooter = location.pathname === "/" || location.pathname === "/hero";
 
   return (
     <div className="flex flex-col min-h-screen">

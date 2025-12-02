@@ -1,154 +1,179 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
     <>
-     
-      <section className="bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 text-white py-20 relative overflow-hidden">
+      
+      <section className="bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-800 text-white py-24 relative overflow-hidden">
+        
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-pink-300/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-yellow-300/20 rounded-full blur-xl animate-pulse delay-500"></div>
+          <div className="absolute top-1/4 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-1/4 right-10 w-80 h-80 bg-pink-400/10 rounded-full blur-3xl animate-float delay-2000"></div>
+          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-blue-400/10 rounded-full blur-3xl animate-float delay-1000"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <svg
-                className="w-4 h-4 text-green-300"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-              </svg>
-              <span>Made for Nigerian Students</span>
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+    
+          <div className="space-y-8">
+            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-sm font-medium border border-white/20">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span>Made for all</span>
             </div>
-
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Get to know your{" "}
+            
+            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              Learning Made{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-pink-300">
-                students
-              </span>{" "}
-              with learning worth engaging
+                Fun & Rewarding
+              </span>
             </h1>
-
-            <p className="text-xl text-purple-100 mb-8 leading-relaxed">
-              Collect all the data you need to{" "}
-              <span className="font-semibold text-white">
-                understand students
-              </span>{" "}
-             with gamified learinng designed 
+            
+            <p className="text-xl text-purple-100 leading-relaxed max-w-lg">
+              Transform your education journey with interactive games, real-time progress tracking, and achievements that make every lesson count.
             </p>
 
-            <div className="flex flex-col  sm:flex-row gap-4">
-              <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transform transition-all duration-200">
-              Get started it's free
-              </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white/30 backdrop-blur-sm rounded-xl hover:bg-white/10 transition-all duration-200">
-                Learn More
-              </button>
+           
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/login?role=student">
+                <button className="group px-8 py-4 bg-white text-purple-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center space-x-2">
+                  <span>🎓 Start Learning</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </button>
+              </Link>
+
+              <Link to="/login?role=admin/dashboard">
+                <button className="px-8 py-4 bg-transparent text-white font-semibold rounded-xl border-2 border-white/30 hover:border-white/50 hover:bg-white/10 transition-all duration-300">
+                  ⚙️ Admin Dashboard
+                </button>
+              </Link>
+            </div>
+
+          
+            <div className="flex items-center space-x-8 pt-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-yellow-300">95%</div>
+                <div className="text-sm text-purple-200">Completion Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-300">10K+</div>
+                <div className="text-sm text-purple-200">Active Students</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-300">4.8/5</div>
+                <div className="text-sm text-purple-200">Student Rating</div>
+              </div>
             </div>
           </div>
 
-         
+      
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20 max-w-md w-full">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-white">
-                  Learning Progress
-                </h3>
-                <div className="px-3 py-1 bg-green-500 text-white text-sm font-medium rounded-full">
-                  +150%
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl border border-white/20 max-w-md w-full transform hover:scale-105 transition-transform duration-300">
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-xl font-semibold text-white">Live Progress</h3>
+                <div className="px-3 py-1 bg-green-500/20 text-green-300 text-sm font-medium rounded-full border border-green-400/30">
+                  Live
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex justify-between text-sm text-purple-100">
-                  <span>1,500</span>
-                  <span>Quiz Completion Rate</span>
-                </div>
-                <div className="flex justify-between text-sm text-purple-100">
-                  <span>1,000</span>
-                  <span>Student Engagement</span>
-                </div>
-                <div className="flex justify-between text-sm text-purple-100">
-                  <span>500</span>
-                  <span>Learning Achievements</span>
-                </div>
-                <div className="flex justify-between text-sm text-purple-100">
-                  <span>100</span>
-                  <span>Course Completions</span>
-                </div>
+      
+              <div className="space-y-6">
+                {[
+                  { label: "Course Completion", value: 78, color: "bg-yellow-400" },
+                  { label: "Quiz Mastery", value: 92, color: "bg-green-400" },
+                  { label: "Game Levels", value: 65, color: "bg-blue-400" },
+                  { label: "Achievements", value: 45, color: "bg-pink-400" }
+                ].map((item, index) => (
+                  <div key={index} className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-purple-100">{item.label}</span>
+                      <span className="text-white font-semibold">{item.value}%</span>
+                    </div>
+                    <div className="h-2 bg-white/20 rounded-full overflow-hidden">
+                      <div 
+                        className={`h-full rounded-full ${item.color} transition-all duration-1000 ease-out`}
+                        style={{ width: `${item.value}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
               </div>
 
-              <div className="mt-6 h-32 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-lg relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-                <svg
-                  className="absolute bottom-4 right-4 w-8 h-8 text-white/60"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
+              
+              <div className="mt-8 p-4 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-xl border border-white/20">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <span className="text-lg">🏆</span>
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">Top Performer</div>
+                    <div className="text-purple-200 text-sm">You're in the top 10%</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Everything You Need to Succeed
+              Learn Smarter, Achieve More
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform combines the best of gamification with proven
-              educational methods tailored for Nigerian students.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Experience education reimagined with game-based learning designed for Nigerian curriculum standards.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Goal Setting
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Set personalized learning goals and track your progress with
-                smart milestones and achievements.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Educational Games
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Engage with interactive mini-games designed to reinforce your
-                learning and make studying fun.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Quizzes & Assessments
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Test your knowledge with adaptive quizzes that adjust to your
-                skill level and learning pace.
-              </p>
-            </div>
-
-            {/* Leaderboards */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Leaderboards & Rewards
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Compete with peers and earn badges, points, and recognition for
-                your learning achievements.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: "🎯",
+                title: "Smart Goals",
+                description: "Personalized learning paths with AI-powered recommendations and progress tracking."
+              },
+              {
+                icon: "🎮",
+                title: "Interactive Games",
+                description: "Engaging educational games that make complex topics easy to understand and remember."
+              },
+              {
+                icon: "📊",
+                title: "Live Analytics",
+                description: "Real-time progress insights and performance analytics to guide your learning journey."
+              },
+              {
+                icon: "🏆",
+                title: "Achievement System",
+                description: "Earn badges, points, and recognition for your accomplishments and milestones."
+              },
+              {
+                icon: "🤝",
+                title: "Peer Collaboration",
+                description: "Learn together with classmates through group challenges and collaborative activities."
+              },
+              {
+                icon: "📚",
+                title: "Curriculum Aligned",
+                description: "Content specifically designed to match Nigerian educational standards and requirements."
+              }
+            ].map((feature, index) => (
+              <div 
+                key={index}
+                className="group bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+              >
+                <div className="text-3xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

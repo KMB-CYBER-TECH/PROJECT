@@ -12,13 +12,13 @@ export default function TestimonialsAndFooter() {
       initial: "G",
     },
     {
-      name: "Emeka Nwankwo",
-      school: "Ahmadu Bello University",
+      name: "Inem Shina",
+      school: "B.S.c & M.S.c",
       xp: "3200 XP",
       quote:
-        "The competitive element with my classmates makes learning fun. I never miss my daily streak now!",
+        "As a master’s graduate, I’ve used many learning tools, but this gamified app truly stands out. It makes complex topics simple, fun, and engaging!",
       
-      initial: "E",
+      initial: "I",
     },
     {
       name: "Fatima Hassan",
@@ -51,7 +51,7 @@ export default function TestimonialsAndFooter() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="bg-red-500 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
+                    <div className="bg-purple-700 text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
                       {t.initial}
                     </div>
                     <div>
@@ -59,7 +59,7 @@ export default function TestimonialsAndFooter() {
                       <p className="text-sm text-gray-500">{t.school}</p>
                     </div>
                   </div>
-                  <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     {t.xp}
                   </span>
                 </div>
@@ -76,7 +76,7 @@ export default function TestimonialsAndFooter() {
       <footer className="bg-gray-100 py-10">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-gray-700">
           <div>
-            <h3 className="flex items-center gap-2 text-lg font-bold text-red-600">
+            <h3 className="flex items-center gap-2 text-lg font-bold text-purple-600">
               <span>🏆</span> ED-Games
             </h3>
             <p className="mt-2 text-sm">
