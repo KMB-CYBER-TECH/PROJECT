@@ -16,7 +16,7 @@ export default function History() {
   const [quizStarted, setQuizStarted] = useState(false);
 
   // Put your OpenAI API key here or use environment variable
-  const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY || "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";
+  const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 
   const generateQuestionsWithOpenAI = async () => {
     setIsLoading(true);
