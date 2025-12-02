@@ -35,3 +35,7 @@ dist-ssr
 # API keys
 *.key
 *.pem
+.env
+backend/.env
+.env.local
+node_modules/
